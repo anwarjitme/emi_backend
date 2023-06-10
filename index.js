@@ -16,7 +16,9 @@ const app=express()
 // }).catch((err)=>
 //           console.log(err)
 // )
-
+app.get("/",(req,res)=>{
+          res.send({"Login":"/user/login","Register":"/user/register","emi":"/user/emi"})
+})
 app.use(express.json());
 app.use("/user",userRoute)
 app.use("/user",emiRouter)
